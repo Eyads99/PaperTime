@@ -4,4 +4,7 @@
     <string name="title_activity_results_page">resultsPage</string>
     <string name="number_of_words">Number of words:</string>
     <string name="timeTaken">You will need</string>
+    <string name="click_here_to_calculate">Click here to calculate</string>
+    <string name="do_you_need_to_do_research">Do you need to do research?</string>
+    <string name="have_you_made_a_plan_for_the_essay">Have you made a plan for the essay?</string>
 </resources>
