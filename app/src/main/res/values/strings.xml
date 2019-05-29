@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PaperTime</string>
+    <string name="paper_time">Paper Time</string>
+    <string name="title_activity_results_page">resultsPage</string>
+    <string name="number_of_words">Number of words:</string>
+    <string name="timeTaken">You will need</string>
+</resources>
