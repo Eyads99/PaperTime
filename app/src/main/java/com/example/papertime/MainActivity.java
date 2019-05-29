@@ -41,12 +41,19 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         Intent intent = new Intent(this, resultsPage.class);
         TextView cText = findViewById(R.id.editText);
+        TextView rText=findViewById(R.id.checkBox);
+        TextView pText=findViewById(R.id.checkBoxPlan);
 
-        float x;
-        x = Integer.parseInt(cText.getText().toString());
+
+        float x = Integer.parseInt(cText.getText().toString());
+        boolean research=Boolean.getBoolean(String.valueOf(rText.getText()));
+        boolean plan=Boolean.getBoolean(String.valueOf(pText.getText()));;
 
          double time;
         time=x*0.0015;
+        if(research) time=time*2;
+        if(plan) time=time/2;
+
         timef=time;
         intent.putExtra(EXTRA_MESSAGE,time);
         startActivity(intent);
