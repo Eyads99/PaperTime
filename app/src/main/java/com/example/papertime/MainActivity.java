@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,11 +45,17 @@ public class MainActivity extends AppCompatActivity {
         TextView rText=findViewById(R.id.checkBox);
         TextView pText=findViewById(R.id.checkBoxPlan);
 
+        CheckBox rTexts= findViewById(R.id.checkBox);
+        CheckBox pTexts= findViewById(R.id.checkBoxPlan);
+
+        boolean research=rTexts.isChecked();
+        boolean plan=pTexts.isChecked();
+
 
         float x = Integer.parseInt(cText.getText().toString());
-        boolean research=Boolean.getBoolean(String.valueOf(rText.getText()));
-        boolean plan=Boolean.getBoolean(String.valueOf(pText.getText()));;
-
+        /*boolean research=Boolean.getBoolean(String.valueOf(rText.getText()));
+        boolean plan=Boolean.getBoolean(String.valueOf(pText.getText()));
+*/
          double time;
         time=x*0.0015;
         if(research) time=time*2;

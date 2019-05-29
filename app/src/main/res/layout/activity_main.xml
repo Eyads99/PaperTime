@@ -40,7 +40,7 @@
         android:id="@+id/Ebutton"
         android:layout_width="221dp"
         android:layout_height="77dp"
-        android:layout_marginStart="92dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="424dp"
         android:onClick="sendMessage"
         android:text="@string/click_here_to_calculate"
@@ -54,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="200dp"
+        android:clickable="true"
         android:text="@string/do_you_need_to_do_research"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
