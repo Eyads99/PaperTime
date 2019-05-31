@@ -19,14 +19,16 @@ public class resultsPage extends AppCompatActivity {
         Intent intent = getIntent();
         double message =  intent.getDoubleExtra(MainActivity.EXTRA_MESSAGE,MainActivity.timef);
 
-        String messages = String.valueOf(message);
-        String messagef ="You will need "+messages+" hours.";
-        TextView textView2 = findViewById(R.id.textView2);
+        TextView textView2 = findViewById(R.id.textView2);//refrences textbox on screen (we will write on it )
 
-        textView2.setText(messagef);
+        String messages = String.valueOf(message);//this is the number that was given by the intent in the previous activity
+        String messagef ="You will need "+messages+" hours.";// message to be displayed
 
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        textView2.setText(messagef);//gives text box the message to write
+
+
+        Toolbar toolbar = findViewById(R.id.toolbar);//below is auto code about previous activity button on top left and pink button in bottom right
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
