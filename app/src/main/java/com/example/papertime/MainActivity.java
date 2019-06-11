@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         if(research) time=time*2;//double time if resarch needs to be done
         if(plan) time=time/2;//halves time if there is a plan
                     ////////////////////////above time is subject to changes and customization
-        timef=time;
-        intent.putExtra(EXTRA_MESSAGE,time);// gives the intent relevant info (text and total time ) //intent is what starts a new activty on screen
+        timef= Math.round(time * 100.0) / 100.0;
+        intent.putExtra(EXTRA_MESSAGE,timef);// gives the intent relevant info (text and total time ) //intent is what starts a new activty on screen
         startActivity(intent);//starts intent
     }
 

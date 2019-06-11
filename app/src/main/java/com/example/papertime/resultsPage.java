@@ -22,7 +22,7 @@ public class resultsPage extends AppCompatActivity {
         TextView textView2 = findViewById(R.id.textView2);//refrences textbox on screen (we will write on it )
 
         String messages = String.valueOf(message);//this is the number that was given by the intent in the previous activity
-        String messagef ="You will need "+messages+" hours.";// message to be displayed
+        String messagef ="You will need about "+messages+" hours.";// message to be displayed
 
 
         textView2.setText(messagef);//gives text box the message to write
