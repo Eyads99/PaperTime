@@ -7,4 +7,17 @@
     <string name="click_here_to_calculate">Click here to calculate</string>
     <string name="do_you_need_to_do_research">Do you need to do research?</string>
     <string name="have_you_made_a_plan_for_the_essay">Have you made a plan for the essay?</string>
+    <string name="please_input_the_due_date">Please input the due date</string>
+    <string-array name="subjects_array">
+        <item>Please pick a subject</item>
+        <item>History</item>
+        <item>Economics</item>
+        <item>Psychology</item>
+        <item>Literature</item>
+        <item>Philosophy</item>
+        <item>Political Science</item>
+        <item>Science</item>
+        <item>Geography</item>
+        <item>Other</item>
+    </string-array>
 </resources>
