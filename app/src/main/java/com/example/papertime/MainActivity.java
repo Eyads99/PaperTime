@@ -1,6 +1,6 @@
 package com.example.papertime;
 
-import android.content.Intent;//imported librabries
+import android.content.Intent;//imported libs
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +17,8 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.PaperTime.MESSAGE";// this is given to the intent
     public static double timef;
+    private Spinner spinner1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)// this is what happens when the app is created (refrence andriod app lifecycle for more info)
     {
@@ -65,10 +67,13 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox rTexts= findViewById(R.id.checkBox);//refrences the research checkbox
         CheckBox pTexts= findViewById(R.id.checkBoxPlan);//refrences the plan checkbox
+        spinner1 = findViewById(R.id.spinner1);//spinner 1 is now a refrence to spinner 1 on screen
+
+
 
         boolean research=rTexts.isChecked();//sees if the resreach check box is ticked or not
         boolean plan=pTexts.isChecked();//sees if the plan check box is ticked or not
-
+        String spin1 = String.valueOf(spinner1.getSelectedItem());//gets the chosen
 
         float x = Integer.parseInt(cText.getText().toString());//gets the inputed number and turns it into a float
         /*boolean research=Boolean.getBoolean(String.valueOf(rText.getText()));
