@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     public void sendMessage(View view) {
         Intent intent = new Intent(this, resultsPage.class);
         TextView cText = findViewById(R.id.editText);//this is how we refrence the number that was inputed
-       // TextView rText=findViewById(R.id.checkBox);
+        //TextView rText=findViewById(R.id.checkBox);
         //TextView pText=findViewById(R.id.checkBoxPlan);
 
         CheckBox rTexts= findViewById(R.id.checkBox);//refrences the research checkbox
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
         boolean research=rTexts.isChecked();//sees if the resreach check box is ticked or not
         boolean plan=pTexts.isChecked();//sees if the plan check box is ticked or not
-        String spin1 = String.valueOf(spinner1.getSelectedItem());//gets the chosen
+        String spin1 = String.valueOf(spinner1.getSelectedItem());//gets the chosen spinner choice
 
         float x = Integer.parseInt(cText.getText().toString());//gets the inputed number and turns it into a float
         /*boolean research=Boolean.getBoolean(String.valueOf(rText.getText()));
