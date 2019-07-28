@@ -16,7 +16,8 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.PaperTime.MESSAGE";// this is given to the intent
-    public static double timef;
+    public static double timef;//time final
+    public static double daysf;//day final
     private Spinner spinner1;
 
     @Override
@@ -61,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, resultsPage.class);
-        TextView cText = findViewById(R.id.editText);//this is how we refrence the number that was inputed
+        TextView cText = findViewById(R.id.editText);//this is how we reference the number that was inputed to the words count
+        TextView TLText = findViewById(R.id.editText2);//this is how we reference the number that was inputed to the time left
         //TextView rText=findViewById(R.id.checkBox);
         //TextView pText=findViewById(R.id.checkBoxPlan);
 
@@ -75,18 +77,25 @@ public class MainActivity extends AppCompatActivity {
         boolean plan=pTexts.isChecked();//sees if the plan check box is ticked or not
         String spin1 = String.valueOf(spinner1.getSelectedItem());//gets the chosen spinner choice
 
-        float x = Integer.parseInt(cText.getText().toString());//gets the inputed number and turns it into a float
+        float x = Integer.parseInt(cText.getText().toString());//gets the inputed number and turns it into a float; words
+        float y = Integer.parseInt(TLText.getText().toString());//number of days that was inputer from the user
         /*boolean research=Boolean.getBoolean(String.valueOf(rText.getText()));
         boolean plan=Boolean.getBoolean(String.valueOf(pText.getText()));
 */
          double time;//this is the total amount of time expected to take
+        double days;
         time=x*0.0015;//this makes it so 500 words takes 30 minutes ; subject to change
         if(research) time=time*2;//double time if resarch needs to be done
         if(plan) time=time/2;//halves time if there is a plan
                     ////////////////////////above time is subject to changes and customization
+        days = time/y;//average number of words to write per day
         timef= Math.round(time * 100.0) / 100.0;
-        intent.putExtra(EXTRA_MESSAGE,timef);// gives the intent relevant info (text and total time ) //intent is what starts a new activty on screen
-        startActivity(intent);//starts intent
+        daysf= Math.round(days*100.0)/100.0;
+        Intent i = new Intent(MainActivity.this, resultsPage.class);
+
+        i.putExtra(EXTRA_MESSAGE,timef);// gives the intent relevant info (text and total time ) //intent is what starts a new activty on screen
+        i.putExtra("AVG_DAYS",daysf);
+        startActivity(i);//starts intent
     }
 
 }

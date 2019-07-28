@@ -91,18 +91,17 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="213dp"
-        android:layout_height="42dp"
+        android:layout_width="286dp"
+        android:layout_height="39dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="How many days until the essay is due"
+        android:hint="How many days until the due date?"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/spinner1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxPlan"
-        app:layout_constraintVertical_bias="0.576"
-       />
+        app:layout_constraintVertical_bias="0.576" />
 
 </android.support.constraint.ConstraintLayout>

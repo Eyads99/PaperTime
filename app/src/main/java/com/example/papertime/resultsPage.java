@@ -17,16 +17,20 @@ public class resultsPage extends AppCompatActivity {
         setContentView(R.layout.activity_results_page);
 
         Intent intent = getIntent();
-        double message =  intent.getDoubleExtra(MainActivity.EXTRA_MESSAGE,MainActivity.timef);
+        double message =  intent.getDoubleExtra(MainActivity.EXTRA_MESSAGE,MainActivity.timef);//get number of hours
+        double days =      intent.getDoubleExtra("AVG_DAYS",MainActivity.daysf);//get avearge words per day
 
         TextView textView2 = findViewById(R.id.textView2);//refrences textbox on screen (we will write on it )
+        TextView textView3 = findViewById(R.id.textView2);//refrences textbox on screen (we will write on it) this is for the average number per day to write
 
-        String messages = String.valueOf(message);//this is the number that was given by the intent in the previous activity
-        String messagef ="You will need about "+messages+" hours.";// message to be displayed
+        //String messages = String.valueOf(message);//this is the number that was given by the intent in the previous activity
+        String messagef ="You will need about "+String.valueOf(message)+" hours.";// message to be displayed
 
+
+        String dayf= "You will need to write on average"+String.valueOf(days) +" words per day.";
 
         textView2.setText(messagef);//gives text box the message to write
-
+        textView3.setText(dayf);
 
         Toolbar toolbar = findViewById(R.id.toolbar);//below is auto code about previous activity button on top left and pink button in bottom right
         setSupportActionBar(toolbar);
