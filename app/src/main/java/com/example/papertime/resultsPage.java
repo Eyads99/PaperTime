@@ -21,10 +21,10 @@ public class resultsPage extends AppCompatActivity {
         double days =      intent.getDoubleExtra("AVG_DAYS",MainActivity.daysf);//get avearge words per day
 
         TextView textView2 = findViewById(R.id.textView2);//refrences textbox on screen (we will write on it )
-        TextView textView3 = findViewById(R.id.textView2);//refrences textbox on screen (we will write on it) this is for the average number per day to write
+        TextView textView3 = findViewById(R.id.textView3);//refrences textbox on screen (we will write on it) this is for the average number per day to write
 
         //String messages = String.valueOf(message);//this is the number that was given by the intent in the previous activity
-        String messagef ="You will need about "+String.valueOf(message)+" hours.";// message to be displayed
+        String messagef ="You will need about "+String.valueOf(message)+" hours worth of writing.";// message to be displayed
 
 
         String dayf= "You will need to write on average"+String.valueOf(days) +" words per day.";

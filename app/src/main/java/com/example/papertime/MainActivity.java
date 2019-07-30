@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         if(research) time=time*2;//double time if resarch needs to be done
         if(plan) time=time/2;//halves time if there is a plan
                     ////////////////////////above time is subject to changes and customization
-        days = time/y;//average number of words to write per day
+        days = x/y;//average number of words to write per day
         timef= Math.round(time * 100.0) / 100.0;
         daysf= Math.round(days*100.0)/100.0;
         Intent i = new Intent(MainActivity.this, resultsPage.class);
